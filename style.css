@@ -1,6 +1,12 @@
 /* The @import rule below imports the Playfair Display and Source Sans Pro fonts into the stylesheet*/
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro:wght@400&display=swap");
 
+/* Set ALL HTML elements with border-box sizing */* {
+
+  box-sizing: border-box;
+
+}
+
 body {
   background-color: #eae2b7;
   color: #003049;
@@ -9,7 +15,6 @@ body {
 }
 
 /* Headings */
-h1,
 h2,
 h3 {
   font-family: "Playfair Display", Times, serif;
@@ -21,9 +26,18 @@ header {
   text-align: center;
 }
 
+header > h1 {
+  font-family: "Playfair Display", Times, serif;
+  text-align: right;
+}
+
+header, nav {
+  text-align: left;
+  padding-top: 2em;
+}
+
 /* Containers */
 div {
-  background-color: #eae2b7;
   margin: auto;
   width: 600px;
 }
@@ -75,4 +89,24 @@ footer {
 /* Other page elements */
 hr {
   border: 1px solid black;
+}
+
+.group {
+  display: flex;
+}
+
+.item {
+  flex: 1;
+}
+
+.portfolio-item {
+  margin: 5px;
+}
+
+.portfolio-item p {
+  font-size: 14px;
+}
+
+div.item p, div.item ul {
+  text-align: left;
 }
